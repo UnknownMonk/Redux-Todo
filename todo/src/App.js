@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+
 import './App.css';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
@@ -15,13 +15,13 @@ export class App extends Component {
   }
 }
 const centerText = {
-  textAlign: 'center'
+  width: '50%',
+  margin: '0 auto',
+  textAlign: 'center',
+  marginTop: '90px',
+  border: '1px solid 173,216,0 ,.7',
+  backgroundColor: 'rgba(173,216,230 ,.7 )',
+  borderRadius: '5px'
 };
 
-const mapStateToProps = state => {
-  console.log('State in Redux Sore', state);
-
-  return { todos: state };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;

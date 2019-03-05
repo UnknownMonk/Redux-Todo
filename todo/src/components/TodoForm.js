@@ -24,15 +24,30 @@ class TodoForm extends Component {
     return (
       <div>
         <input
+          style={ipStyle}
           onChange={this.handleTaskChange}
           placeholder="Add Todo"
           value={this.state.task}
         />
-        <button onClick={this.submitTodo}>Add Todo</button>
+        <button style={addBtn} onClick={this.submitTodo}>
+          Add Todo
+        </button>
       </div>
     );
   }
 }
+
+const ipStyle = {
+  borderStyle: 'none',
+  textAlign: 'center'
+};
+
+const addBtn = {
+  borderStyle: 'none',
+  margin: '10px 10px',
+  backgroundColor: 'rgba(173,200,255 ,.9 )',
+  border: '2px solid rgba(173,200,200 ,.9 )'
+};
 
 export default connect(
   null,

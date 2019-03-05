@@ -12,14 +12,31 @@ const TodoList = props => {
           key={todo.id}
         >
           {' '}
-          <h2>
+          <h2 style={evenButton}>
             {todo.task}{' '}
-            <button onClick={() => props.deleteTodo(todo.id)}>x</button>
+            <button style={delBtn} onClick={() => props.deleteTodo(todo.id)}>
+              x
+            </button>
           </h2>
         </div>
       ))}
     </div>
   );
+};
+
+const evenButton = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
+};
+
+const delBtn = {
+  margin: '0 10px',
+  borderStyle: 'none',
+  backgroundColor: 'rgba(173,216,230 ,.2 )',
+  color: 'red',
+  fontWeight: 'bold',
+  fontSize: '20px'
 };
 
 const mapStateToProps = state => {
